@@ -1,0 +1,48 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Verdana', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+	font-size: 1em;
+	margin-bottom: 1.8em;
+	letter-spacing: .08em;
+}
+
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}
+
+/* =================================
+  Navigation Styles
+==================================== */
+nav {
+  background-color: darkgrey;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav li {
+  margin: 15px;
+
+}
+/* Meeds to be responsive! ^^^^ (inside a media query)
