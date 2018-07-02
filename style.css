@@ -47,20 +47,42 @@ h3 {
 ==================================== */
 nav {
   background-color: darkgrey;
-	display: none;
+	/* display: none; */
 
 }
 
 .main-nav {
-  display: flex;
+	display: none;
   justify-content: center;
+	flex-direction: column;
+	position: fixed;
+	top: 50px;
+	right: 20px;
+	left: 20px;
+	color: white;
+	background-color: #36383a;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .main-nav li {
-  margin: 15px;
-
+  padding: 7px 0;
 }
-/* Meeds to be responsive! ^^^^ (inside a media query)
+
+li + li {
+	border-top: 1px solid darkgrey;
+}
+
+.reveal-nav {
+	min-width: 40px;
+	min-height: 30px;
+	background-color: black;
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	border: white 1px dotted;
+	border-radius: 2px;
+}
 
 
 /* =================================
@@ -73,7 +95,9 @@ section {
 	margin: 0 auto;
 	color: #686868;
 }
-#section1 {
+#section1,
+.services-banner,
+.contact-banner {
 	background-color: black;
 	text-align: center;
 	min-height: 350px;
@@ -85,6 +109,7 @@ section {
 	color: white;
 	background: lightgrey url("http://placeimg.com/1000/480/nature") no-repeat fixed center/cover;
 	margin-bottom: 80px;
+	width: 100%;
 }
 
 #section1 h1 {
@@ -93,9 +118,49 @@ section {
  	text-shadow: black 2px 2px;
 }
 
-#section2 {
+#section2,
+#section3 h3,
+#section4,
+footer {
 	text-align: center;
 }
+
+.services-banner {
+	min-height: 460px;
+}
+
+.services-banner h3 {
+	font-size: 2em;
+	text-shadow: darkgrey 2px 2px;
+	margin: 0;
+}
+
+.services-banner p {
+	width: 80%;
+	line-height: 2em;
+}
+
+#section3 div {
+	max-width: 250px;
+	margin: 20px auto;
+}
+
+#section3 h3 {
+	font-size: 1.3em;
+}
+#section3 p {
+	margin-bottom: 50px;
+}
+
+#section4 {
+	font-style: italic;
+	color: darkgrey;
+}
+
+ #section4 span {
+	 font-size: .8em;
+	 display: block;
+ }
 
 
 /* =================================
@@ -119,6 +184,11 @@ section div p {
 
 .blue-title {
 	color: #4a87b2;
+}
+
+#one-big-column {
+	min-width: 95%;
+	margin: 0 auto;
 }
 
 /* =================================
@@ -145,3 +215,92 @@ section div p {
 .red-button {
 	background-color: maroon;
 }
+
+.white-button {
+	color: inherit;
+	background-color: white;
+	border: lightgrey 1px solid;
+}
+
+.black-button {
+	color: white;
+	background-color: black;
+	border: white 1px solid;
+	float: left;
+	margin-left: 20px;
+}
+/* =================================
+	Contact Form Styles
+==================================== */
+.contact-banner {
+	padding-top: 30px;
+	margin-top: 30px;
+	padding-bottom: 70px;
+}
+
+.contact-banner h2 {
+	font-size: 2em;
+	text-shadow: black 2px 2px;
+}
+.contact-banner p,
+.contact-banner input,
+.contact-banner textarea {
+	color: black;
+	width: 85%;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 2px;
+	padding: 15px;
+	margin-bottom: 10px;
+	border: none;
+}
+
+/* .contact-banner input,
+.contact-banner textarea {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: none;
+} */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+
+}
+
+/* =================================
+	Footer Styles
+==================================== */
+
+footer {
+	border-top: 1px lightgrey solid;
+	padding-top: 25px;
+	padding-bottom: 5px;
+	margin-top: 60px;
+	margin-bottom: 30px;
+	font-size: .8em;
+	color: darkgrey;
+}
+
+/* =================================
+	Media Queries
+==================================== */
+@media (min-width: 522px) {
+	#section3 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+	}
+	#section3 div {
+		flex: 1 1 50%;
+		/* max-width: 260px;
+		margin: auto; */
+	}
+}
+
+/* @media (min-width: 850px) {
+	#section3 div {
+		flex-basis: 50%;
+	}
+} */
