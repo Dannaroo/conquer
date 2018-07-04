@@ -27,6 +27,7 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
 img {
 	max-width: 100%;
 }
@@ -65,7 +66,7 @@ nav {
 	margin: 0 auto;
 }
 
-.main-nav li {
+.main-nav a {
   padding: 7px 0;
 }
 
@@ -82,6 +83,10 @@ li + li {
 	right: 20px;
 	border: white 1px dotted;
 	border-radius: 2px;
+}
+
+li a {
+   display: block;
 }
 
 
@@ -186,9 +191,10 @@ section div p {
 	color: #4a87b2;
 }
 
-#one-big-column {
+.one-big-column {
 	min-width: 95%;
 	margin: 0 auto;
+	text-align: left;
 }
 
 /* =================================
@@ -226,7 +232,7 @@ section div p {
 	color: white;
 	background-color: black;
 	border: white 1px solid;
-	float: left;
+
 	margin-left: 20px;
 }
 /* =================================
@@ -290,17 +296,113 @@ footer {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-
+		width: 98%;
 	}
-	#section3 div {
-		flex: 1 1 50%;
-		/* max-width: 260px;
-		margin: auto; */
+
+	#section3 .two-column {
+		flex: 1 1 43%;
+		margin-left: 15px;
+		margin-right: 15px;
+		padding-bottom: 30px;
 	}
 }
 
-/* @media (min-width: 850px) {
-	#section3 div {
-		flex-basis: 50%;
+@media (min-width: 767px) {
+
+	/* Navigation */
+
+	.main-nav {
+		display: flex;
+		flex-direction: row;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		margin: 0 auto;
 	}
-} */
+
+	.main-nav a {
+		padding: 13px 20px;
+		margin: 5px 4px 10px 4px;
+		border: 1px solid darkgrey;
+	}
+
+	.main-nav a:hover {
+		background-color: darkgrey;
+	}
+
+	/* Section 1 */
+
+	#section1 {
+		font-size: 1.5em;
+		min-height: 610px;
+	}
+
+	/* Section 2 */
+
+	#section2 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 98%;
+		align-items: flex-start;
+	}
+
+	.three-column {
+		flex: 1 1 27%;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	#section2 .two-column {
+		flex: 1 1 45%;
+		margin-left: 15px;
+		margin-right: 15px;
+		padding-bottom: 40px;
+	}
+
+	/* Contact Form */
+
+	.contact-form {
+		width: 85%;
+	  color: pink;
+	  display: flex;
+	  flex-direction: column;
+	  flex-wrap: wrap;
+	  border: none;
+	  height: 200px;
+
+	  margin: 0 auto;
+	}
+
+	.contact-form textarea {
+		flex: 1 1 100%;
+		margin: 10px 20px;
+		width: auto;
+
+	}
+
+	.contact-form input {
+		margin: 10px 20px;
+		width: auto;
+	}
+
+}
+
+@media (min-width: 1200px) {
+	#section2,
+	#section3 {
+		max-width: 1200px;
+	}
+	/* TO DO
+	-Refine Section 3 to go from 2 column to 4 column seamlessly
+	at around 850px
+	-Fix width of large section 3 image to match content
+	-Make Section 3 have a uniform width for both small and
+	large columns
+	-fix form element to have same width as p element above
+	-fix max widths of Section 2 columns
+	-fix section 2 large images to align with their container
+	-Make Section 2 have a uniform width for both small and
+	large columns- DONE!*/
+}
