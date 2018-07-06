@@ -75,14 +75,31 @@ li + li {
 }
 
 .reveal-nav {
-	min-width: 40px;
-	min-height: 30px;
-	background-color: black;
 	position: fixed;
 	top: 10px;
 	right: 20px;
-	border: white 1px dotted;
-	border-radius: 2px;
+	border-radius: 5px;
+	font-size: 1.5em;
+	letter-spacing: -3px;
+	color: lightgrey;
+	background-color: black;
+	border: none;
+	font-weight: 400;
+}
+
+#arrow {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 50%;
+	font-size: 1.8em;
+	color: lightgrey;
+	background-color: black;
+	border: none;
+	min-width: 40px;
+	min-height: 35px;
+	text-align: center;
 }
 
 li a {
@@ -113,7 +130,7 @@ section {
 	flex-direction: column;
 	color: white;
 	background: lightgrey url("http://placeimg.com/1000/480/nature") no-repeat fixed center/cover;
-	margin-bottom: 80px;
+	margin-bottom: 40px;
 	width: 100%;
 }
 
@@ -128,10 +145,6 @@ section {
 #section4,
 footer {
 	text-align: center;
-}
-
-.services-banner {
-	min-height: 460px;
 }
 
 .services-banner h3 {
@@ -165,6 +178,10 @@ footer {
  #section4 span {
 	 font-size: .8em;
 	 display: block;
+ }
+
+ #section4 h2 {
+	 font-size: 2em;
  }
 
 
@@ -205,7 +222,7 @@ section div p {
 	color: white;
 	background-color: black;
 	padding: 13px 35px 13px 35px;
-	border-radius: 6%;
+	border-radius: 8%;
 	font-weight: 300;
 	font-size: 1.1em;
 }
@@ -231,9 +248,8 @@ section div p {
 .black-button {
 	color: white;
 	background-color: black;
-	border: white 1px solid;
-
-	margin-left: 20px;
+	border: none;
+  margin-left: 95px;
 }
 /* =================================
 	Contact Form Styles
@@ -295,15 +311,18 @@ footer {
 	#section3 {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
-		width: 98%;
+		/* justify-content: space-around; */
+		/* width: 98%; */
+		width: 97%;
+		justify-content: space-evenly;
+
 	}
 
 	#section3 .two-column {
-		flex: 1 1 43%;
-		margin-left: 15px;
-		margin-right: 15px;
-		padding-bottom: 30px;
+		/* flex-basis: 45%;
+		padding-bottom: 30px; */
+		flex: 1 1 41%;
+  	margin: 24px;
 	}
 }
 
@@ -352,6 +371,7 @@ footer {
 		flex: 1 1 27%;
 		margin-left: 15px;
 		margin-right: 15px;
+		max-width: 360px;
 	}
 
 	#section2 .two-column {
@@ -359,6 +379,7 @@ footer {
 		margin-left: 15px;
 		margin-right: 15px;
 		padding-bottom: 40px;
+		max-width: 555px;
 	}
 
 	/* Contact Form */
@@ -371,7 +392,6 @@ footer {
 	  flex-wrap: wrap;
 	  border: none;
 	  height: 200px;
-
 	  margin: 0 auto;
 	}
 
@@ -379,7 +399,6 @@ footer {
 		flex: 1 1 100%;
 		margin: 10px 20px;
 		width: auto;
-
 	}
 
 	.contact-form input {
@@ -387,6 +406,28 @@ footer {
 		width: auto;
 	}
 
+	#contact p {
+		width: 82%;
+	}
+
+}
+
+@media (min-width: 900px) {
+	#section3 .two-column {
+		flex: 1 1 41%;
+		margin: 20px 31px 20px 31px;
+	}
+}
+
+@media (min-width: 980px) {
+	#section3 .two-column {
+		flex: 1 1 20%;
+		margin: 18px;
+	}
+	#section3 {
+		justify-content: space-evenly;
+		width: 97%;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -394,15 +435,20 @@ footer {
 	#section3 {
 		max-width: 1200px;
 	}
+
+	.one-big-colum img {
+
+	}
 	/* TO DO
 	-Refine Section 3 to go from 2 column to 4 column seamlessly
-	at around 850px
-	-Fix width of large section 3 image to match content
+	at around 850px-DONE
+	-Fix width of large section 3 image to match content-DONE
 	-Make Section 3 have a uniform width for both small and
-	large columns
+	large columns-DONE
 	-fix form element to have same width as p element above
-	-fix max widths of Section 2 columns
-	-fix section 2 large images to align with their container
+	-fix max widths of Section 2 columns-DONE
+	-fix section 2 large images to align with their container-DONE
 	-Make Section 2 have a uniform width for both small and
-	large columns- DONE!*/
+	large columns- DONE!
+	-match button-DONE*/
 }

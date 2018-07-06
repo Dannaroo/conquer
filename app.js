@@ -11,3 +11,15 @@ button[0].addEventListener('click', () => {
     navBar[0].style.display = "flex";
   }
 });
+
+function backToTopArrow() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("arrow").style = "display: block";
+        console.log("1")
+    } else {
+        document.getElementById("arrow").style = "display: none";
+        console.log("2")
+    }
+}
+
+window.onscroll = function() {backToTopArrow()};
