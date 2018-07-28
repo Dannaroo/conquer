@@ -14,12 +14,58 @@ button[0].addEventListener('click', () => {
 
 function backToTopArrow() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        document.getElementById("arrow").style = "display: block";
-        console.log("1")
+        // document.getElementById("arrow").style = "display: block";
+        $("#arrow").fadeIn("slow");
+
     } else {
-        document.getElementById("arrow").style = "display: none";
-        console.log("2")
+        // document.getElementById("arrow").style = "display: none";
+        $("#arrow").fadeOut("slow");
+
     }
 }
 
 window.onscroll = function() {backToTopArrow()};
+
+//smooth scrolling
+
+$("#arrow").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#section1").offset().top
+    }, 2000);
+});
+
+$("#homepageButton").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#section1").offset().top
+    }, 2000);
+});
+
+$("#aboutusButton").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#section2").offset().top
+    }, 2000);
+});
+
+$("#servicesButton").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#services").offset().top
+    }, 2000);
+});
+
+$("#contactButton").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#contact").offset().top
+    }, 2000);
+});
+
+//end smooth scrollTop
+
+//highlight on hover
+$(".main-nav a").hover(function(){
+    $(this).addClass("highlight").fadeIn("slow");
+},
+function(){
+    $(this).addClass("").fadeIn("slow");
+});
+
+//highlight on focus

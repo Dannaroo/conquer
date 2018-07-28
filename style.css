@@ -97,8 +97,8 @@ li + li {
 	color: lightgrey;
 	background-color: black;
 	border: none;
-	min-width: 40px;
-	min-height: 35px;
+	min-width: 50px;
+	min-height: 50px;
 	text-align: center;
 }
 
