@@ -346,7 +346,8 @@ footer {
 		border: 1px solid darkgrey;
 	}
 
-	.main-nav a:hover {
+	.highlight,
+	.active {
 		background-color: darkgrey;
 	}
 

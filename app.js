@@ -61,11 +61,39 @@ $("#contactButton").click(function() {
 //end smooth scrollTop
 
 //highlight on hover
-$(".main-nav a").hover(function(){
-    $(this).addClass("highlight").fadeIn("slow");
+// $(".main-nav a").hover(function(){
+//     $(this).addClass("highlight").fadeIn("slow");
+// },
+// function(){
+//     $(this).removeClass("highlight").fadeIn("slow");
+// });
+
+$(".main-nav a").hover(
+function() {
+$(this).stop().animate({"background-color": "pink"}, "slow");
+console.log('1');
 },
-function(){
-    $(this).addClass("").fadeIn("slow");
+function() {
+$(this).stop().animate({"background-color": "blue)"}, "slow");
+console.log('2');
 });
 
-//highlight on focus
+// });
+
+//highlight on window position
+$(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+    if (windscroll) {
+        $('.scroll-section').each(function(i) {
+            if ($(this).position().top <= windscroll + 250) {
+                $('nav li a.active').removeClass('active');
+                $('nav li a').eq(i).addClass('active');
+            }
+        });
+
+    } else {
+        $('nav li a.active').removeClass('active');
+        $('nav li a:first').addClass('active');
+    }
+
+}).scroll();
