@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Conquer</title>
-    <link rel="stylesheet" href="masterstyle.css"> <!-- Don't need this? -->
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -10,12 +9,12 @@
       <nav>
         <button class="reveal-nav">&#x02261;&#x02261;</button>
         <a id="arrow" href="#top">&#x02227;</a>
-        <ul class="main-nav">
-          <li><a href="#section1" id="homepageButton">Homepage</a></li>
-          <li><a href="#section2"id="aboutusButton">About Us</a></li>
-          <li><a href="#services"id="servicesButton">Services</a></li>
-          <li><a href="#contact"id="contactButton">Contact</a></li>
-          <li><a href="https://www.facebook.com/templatemo" target="_blank">External</a></li>
+        <ul id="navParent" class="main-nav">
+          <li><a href="#section1" id="homepageButton" class="hover">Homepage</a></li>
+          <li><a href="#section2"id="aboutusButton" class="hover">About Us</a></li>
+          <li><a href="#services"id="servicesButton" class="hover">Services</a></li>
+          <li><a href="#contact"id="contactButton" class="hover">Contact</a></li>
+          <li><a href="https://www.facebook.com/templatemo" target="_blank" class="hover">External</a></li>
         </ul>
       </nav>
       <section class="scroll-section" id="section1">
@@ -23,6 +22,7 @@
         <span>Simple Bootstrap Template</span>
       </section>
     </header>
+
     <main>
       <section class="scroll-section" id="section2">
         <div class="three-column">
@@ -32,10 +32,10 @@
           <h4><a href="#top" class="button green-button">Button Green</a></h4>
         </div>
         <div class="three-column">
-        <img src="http://placeimg.com/360/180/any" alt=""></img>
-        <h3 class="blue-title">Responsive Design</h3>
-        <p>Conquer Template is provided by templatemo for free of charge. You can use this template for any kind of website. No credit link is required. All images by <a href="unsplash.com">Unsplash</a>. Thank you for visiting our website. Please come again!.</p>
-        <h4><a href="#top" class="button blue-button">See Details</a></h4>
+          <img src="http://placeimg.com/360/180/any" alt=""></img>
+          <h3 class="blue-title">Responsive Design</h3>
+          <p>Conquer Template is provided by templatemo for free of charge. You can use this template for any kind of website. No credit link is required. All images by <a href="unsplash.com">Unsplash</a>. Thank you for visiting our website. Please come again!.</p>
+          <h4><a href="#top" class="button blue-button">See Details</a></h4>
         </div>
         <div class="three-column">
           <img src="http://placeimg.com/360/180/any" alt=""></img>
@@ -97,30 +97,32 @@
       </section>
 
       <div class="contact-banner scroll-section" id="contact">
-          <h2>Contact Form</h2>
-          <div>
-            <p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id
-               felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia.
-               Etiam a mi quis arcu varius condimentum.</p>
+        <h2>Contact Form</h2>
+        <div>
+          <p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id
+             felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia.
+             Etiam a mi quis arcu varius condimentum.
+          </p>
 
-            <form>
-              <div class="contact-form">
-                <input type="text" id="name" name="user_name" placeholder="Name">
-                <input type="email" id="mail" name="user_email" placeholder="Email">
-                <input type="esubject" id="subject" name="user_subject" placeholder="Subject">
-                <textarea rows="8" cols="30" id="message" name="user_message" placeholder="Your message here...."></textarea>
-              </div>
-              <button type="submit" class="button black-button">Send</button>
-            </form>
-          </div>
+          <form>
+            <div class="contact-form">
+              <input type="text" id="name" name="user_name" placeholder="Name">
+              <input type="email" id="mail" name="user_email" placeholder="Email">
+              <input type="esubject" id="subject" name="user_subject" placeholder="Subject">
+              <textarea rows="8" cols="30" id="message" name="user_message" placeholder="Your message here...."></textarea>
+            </div>
+            <button type="submit" class="button black-button">Send</button>
+          </form>
         </div>
-        <section id="section4">
-          <h2>Use it free!</h2>
-          <span><em>“Conquer is free Bootstrap template from templatemo website.</em></span>
-          <span><em>No backlink is required to use this layout.”</em></span>
-        </section>
+      </div>
+      <section id="section4">
+        <h2>Use it free!</h2>
+        <span><em>“Conquer is free Bootstrap template from templatemo website.</em></span>
+        <span><em>No backlink is required to use this layout.”</em></span>
+      </section>
 
     </main>
+
     <footer>
 
       <span>Copyright © 2084 Your Company Name | Design: <a href="http://www.templatemo.com/">template mo</a></span>

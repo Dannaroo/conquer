@@ -1,0 +1,8 @@
+-add scroll effects on link click.- DONE
+-add fade in and out highlight on mouseover of links
+- add fade in and out of return to top arrow. -DONE
+-navbar links different sizes-FIXED
+-navbar button spacing-FIXED
+-return to top arrow fades in/out in wrong spot. -CHECK DIV TAGS ARE IN THE RIGHT SPOT
+-highlight nav links based on which section of page you are on.-DONE
+-on navlink click. navbar link does not stay highlighted.-FIXED

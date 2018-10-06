@@ -106,6 +106,18 @@ li a {
    display: block;
 }
 
+.hover:hover {
+  background-color: darkgrey;
+}
+
+.dark-grey {
+  background-color: #36383a;
+}
+
+.clicked {
+  background-color: darkgrey;
+}
+
 
 /* =================================
   Section Styles
@@ -307,6 +319,8 @@ footer {
 /* =================================
 	Media Queries
 ==================================== */
+
+
 @media (min-width: 522px) {
 	#section3 {
 		display: flex;
@@ -342,13 +356,9 @@ footer {
 
 	.main-nav a {
 		padding: 13px 20px;
-		margin: 5px 4px 10px 4px;
 		border: 1px solid darkgrey;
-	}
-
-	.highlight,
-	.active {
-		background-color: darkgrey;
+    width: 8rem;
+    margin: .8rem .8rem;
 	}
 
 	/* Section 1 */
@@ -418,6 +428,10 @@ footer {
 		flex: 1 1 41%;
 		margin: 20px 31px 20px 31px;
 	}
+
+  .main-nav a {
+    margin: .8rem 1.8rem;
+  }
 }
 
 @media (min-width: 980px) {
